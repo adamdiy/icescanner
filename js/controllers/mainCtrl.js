@@ -82,10 +82,10 @@ $scope.isNumber = angular.isNumber;
 $scope.submit = function (newSearchOptions) {
     
     $scope.searchOptions = newSearchOptions;
-
     for (var item in $scope.arrayProductData) {
       findLowestPrice($scope.arrayProductData[item]);
     }
+    closeThisDialog();
 }
 
     $scope.advancedSearch = function () {

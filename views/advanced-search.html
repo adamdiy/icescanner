@@ -8,5 +8,5 @@
           <li><input type="checkbox" ng-model="searchOptions.AsdaActive"> <span ng-click="searchOptions.AsdaActive = !searchOptions.AsdaActive">ASDA</span></li>
           <li><input type="checkbox" ng-model="searchOptions.WaitrActive"> <span ng-click="searchOptions.WaitrActive = !searchOptions.WaitrActive">Waitrose</span></li>
 				</ul>
-<button ng-click="closeThisDialog() && submit(searchOptions)">Submit</button>
+<button ng-click="closeThisDialog(); submit(searchOptions)">Submit</button>
 			</div>
