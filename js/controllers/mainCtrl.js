@@ -37,24 +37,32 @@ $scope.orderByField = '-dealDiff';
     function findLowestPrice(iceCreamObj) {
       
       var pricearray=[];
+      var activearray=[];
       iceCreamObj.avgPrice = "NA";
       iceCreamObj.lowestPrice = "NA";
       iceCreamObj.dealDiff = "NA";
       //DRY adam
-      if(iceCreamObj.SainsPrice>0&&$scope.searchOptions.SainsActive) pricearray.push(iceCreamObj.SainsPrice);
-      if(iceCreamObj.TescoPrice>0&&$scope.searchOptions.TescoActive) pricearray.push(iceCreamObj.TescoPrice);
-      if(iceCreamObj.MorriPrice>0&&$scope.searchOptions.MorriActive) pricearray.push(iceCreamObj.MorriPrice);
-      if(iceCreamObj.OcadoPrice>0&&$scope.searchOptions.OcadoActive) pricearray.push(iceCreamObj.OcadoPrice);
-      if(iceCreamObj.AsdaPrice>0&&$scope.searchOptions.AsdaActive)pricearray.push(iceCreamObj.AsdaPrice);
-      if(iceCreamObj.WaitrPrice>0&&$scope.searchOptions.WaitrActive) pricearray.push(iceCreamObj.WaitrPrice);
+      if(iceCreamObj.SainsPrice>0&&$scope.searchOptions.SainsActive) activearray.push(iceCreamObj.SainsPrice);
+      if(iceCreamObj.TescoPrice>0&&$scope.searchOptions.TescoActive) activearray.push(iceCreamObj.TescoPrice);
+      if(iceCreamObj.MorriPrice>0&&$scope.searchOptions.MorriActive) activearray.push(iceCreamObj.MorriPrice);
+      if(iceCreamObj.OcadoPrice>0&&$scope.searchOptions.OcadoActive) activearray.push(iceCreamObj.OcadoPrice);
+      if(iceCreamObj.AsdaPrice>0&&$scope.searchOptions.AsdaActive)activearray.push(iceCreamObj.AsdaPrice);
+      if(iceCreamObj.WaitrPrice>0&&$scope.searchOptions.WaitrActive) activearray.push(iceCreamObj.WaitrPrice);
+      
+      if(iceCreamObj.SainsPrice>0) pricearray.push(iceCreamObj.SainsPrice);
+      if(iceCreamObj.TescoPrice>0) pricearray.push(iceCreamObj.TescoPrice);
+      if(iceCreamObj.MorriPrice>0) pricearray.push(iceCreamObj.MorriPrice);
+      if(iceCreamObj.OcadoPrice>0) pricearray.push(iceCreamObj.OcadoPrice);
+      if(iceCreamObj.AsdaPrice>0)pricearray.push(iceCreamObj.AsdaPrice);
+      if(iceCreamObj.WaitrPrice>0) pricearray.push(iceCreamObj.WaitrPrice);
       
      
       if(pricearray.length>0) {
         
       iceCreamObj.avgPrice = Array.avg(pricearray);
-      iceCreamObj.lowestPrice = Array.min(pricearray);
+      iceCreamObj.lowestPrice = Array.min(activearray);
       iceCreamObj.dealDiff = iceCreamObj.avgPrice - iceCreamObj.lowestPrice;
-      iceCreamObj.dealPercent = (iceCreamObj.dealDiff/iceCreamObj.avgPrice)*100;
+      //iceCreamObj.dealPercent = (iceCreamObj.dealDiff/iceCreamObj.avgPrice)*100;
         
       }
       
