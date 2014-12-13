@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>mySupermarket Basket API</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js" type="text/javascript"></script>
+	
+	<script src="http://www.mysupermarket.co.uk/ExternalPartners/Basket/lib/jquery.jsonp-2.4.0.min.js" type="text/javascript"></script>
+    <script src="./mySuperAPI.js" type="text/javascript"></script>
+    <link href="http://www.mysupermarket.co.uk/ExternalPartners/Basket/MSPBasketAPI.css" rel="stylesheet" type="text/css" />
+	
+	
+    <script type="text/javascript">
+        $(document).ready(function ()
+        {
+            _MSPCP.Activate(
+        {
+            campaign:
+            {
+                banner: "34"
+            },
+            onSubscribe: function ()
+            {
+                
+            }
+        });
+        });
+    </script>
+    <style type="text/css">
+    body
+    {
+        padding:20px;
+        max-width:1024px;
+        margin-left:auto;
+        margin-right:auto;
+        border:solid 1px #a1a1a1;
+    }
+    
+    textarea
+    {
+        width:970px;
+        border:none;
+        padding:20px 0px 0px 20px;
+        resize: none;
+    }
+    .Widget
+    {
+        background-color:#f0f0f0;
+        padding:10px;
+        margin-bottom:20px;
+        width:1000px
+    }
+    .Example
+    {
+        background-color:#ffffff;
+        padding:20px;
+    }
+    </style>
+</head>
+<body ng-app="iceCreamApp">
+
+  <div class="Widget">
+    <h1>Price comparison</h1>
+    <div class="Explenation">
+    This widget allows you to fetch the price and promo for any product and any store and display in on your web page.
+    Clicking on the retailer's logo will take you to the product page on mySupermarket for that retailer.<br />
+    The "msdata" variable specifies the mySupermarket ID of the product. When integrating please ask mySupermarket for a dictionary of
+    products and IDs to help with your integration.
+    </div>
+    <br /><br />Code:<br /><br />
+    
+    Examples:<br />
+    <div class="Example">
+    
+    <b>Phish Food (500ml)</b><br />
+            <div class="MSPPricesContainer">
+                <a mySupermarket action="price" msdata="121" store="Waitrose" href="http://waitrose.mysupermarket.co.uk">Waitrose</a>
+                <a mySupermarket action="price" msdata="121" store="ASDA" href="http://asda.mysupermarket.co.uk">ASDA</a>
+                <a mySupermarket action="price" msdata="121" store="Morrisons" href="http://asda.mysupermarket.co.uk">ASDA</a>
+                <a mySupermarket action="price" msdata="121" store="Ocado" href="http://ocado.mysupermarket.co.uk">Ocado</a>
+                <a mySupermarket action="price" msdata="121" store="Sainsburys" href="http://sainsburys.mysupermarket.co.uk">Sainsburys</a>
+                <a mySupermarket action="price" msdata="121" store="Tesco" href="http://tesco.mysupermarket.co.uk">Tesco</a>
+                <a mySupermarket action="price" msdata="121" store="Waitrose" href="http://waitrose.mysupermarket.co.uk">Waitrose</a>
+            </div>
+    
+    <br /><br />
+    
+           
+        </div>
+        </div>
+ 
+
+
+   
+   
+
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+
+<div class="journey row" ng-click="item.DetailsHidden = !item.DetailsHidden">
+     <div class="col-xs-4">
+        <p>{{item.productname}} </p>
+      </div>
+      <div class="col-xs-2">
+        <p>{{item.lowestPrice | currency:"£"}}</p>
+      </div>
+      <div class="col-xs-2">
+        <p>{{item.avgPrice | currency:"£"}} </p>
+      </div>
+      <div class="col-xs-2">
+        <p>{{item.dealDiff  | currency:"£"}} </p>
+      </div>
+      <div class="col-xs-2">
+        <p>{{item.dealPercent  | number:0}}% </p>
+      </div>
+  </div>
+  
+  <detail-journey></detail-journey>

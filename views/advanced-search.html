@@ -1,0 +1,12 @@
+ <div class="col-xs-3">
+				<b>Include/exclude stores</b>
+				<ul>
+					<li><input type="checkbox" ng-model="searchOptions.SainsActive"> <span ng-click="searchOptions.SainsActive = !searchOptions.SainsActive">Sainsburys </span></li>
+          <li><input type="checkbox" ng-model="searchOptions.TescoActive"> <span ng-click="searchOptions.TescoActive = !searchOptions.TescoActive">Tesco</span></li>
+          <li><input type="checkbox" ng-model="searchOptions.MorriActive"> <span ng-click="searchOptions.MorriActive = !searchOptions.MorriActive">Morrisons</span></li>
+          <li><input type="checkbox" ng-model="searchOptions.OcadoActive"> <span ng-click="searchOptions.OcadoActive = !searchOptions.OcadoActive">Ocado</span></li>
+          <li><input type="checkbox" ng-model="searchOptions.AsdaActive"> <span ng-click="searchOptions.AsdaActive = !searchOptions.AsdaActive">ASDA</span></li>
+          <li><input type="checkbox" ng-model="searchOptions.WaitrActive"> <span ng-click="searchOptions.WaitrActive = !searchOptions.WaitrActive">Waitrose</span></li>
+				</ul>
+<button ng-click="closeThisDialog() && submit(searchOptions)">Submit</button>
+			</div>

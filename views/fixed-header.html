@@ -1,0 +1,34 @@
+ <div class="journey row header search">
+      <div class="col-xs-3">
+        <p>icescanner UK</p>
+      </div>
+     <div class="col-xs-3">
+        <input class="quicksearch" ng-model=query type="text"/>
+      </div>
+     <div class="col-xs-3">
+        <p ng-click="advancedSearch()"><a>Adv search</a></p>
+      </div>
+       <div class="col-xs-3">
+        <p ng-click="about()"><a>About</a></p>
+      </div>
+    </div>
+
+
+    <div class="journey row header rowheaders">
+     <div class="col-xs-4">
+        <p ng-click="orderByField='-productname'; reverseSort = !reverseSort">Item</p>
+      </div>
+      <div class="col-xs-2">
+        <p ng-click="orderByField='-lowestPrice'; reverseSort = !reverseSort">Lowest</p>
+      </div>
+      <div class="col-xs-2">
+        <p ng-click="orderByField='-avgPrice'; reverseSort = !reverseSort">Average</p>
+      </div>
+      <div class="col-xs-2">
+        <p ng-click="orderByField='dealDiff'; reverseSort = !reverseSort">Disc. £</p>
+      </div>
+       <div class="col-xs-2">
+        <p ng-click="orderByField='dealPercent'; reverseSort = !reverseSort">Disc. %</p>
+      </div>
+    </div>
+

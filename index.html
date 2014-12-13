@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html ng-app="iceCreamApp">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Ice cream of the week: UK</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <link rel="stylesheet" style="text/css" href="./css/styling.css">
+    <link rel="stylesheet" style="text/css" href="./css/ngDialog.css">
+    
+    
+    <script type="text/javascript">
+        // $(document).ready(function ()
+        // {
+        //     _MSPCP.Activate(
+        // {
+        //     campaign:
+        //     {
+        //         banner: "34"
+        //     },
+        //     onSubscribe: function ()
+        //     {
+                
+        //     }
+        // });
+        // });
+    </script>
+
+  </head>
+<body ng-controller="mainCtrl">
+
+
+<!--use orderBy below for quick ordering of records-->
+    <div class="allproducts">
+      <fixed-header></fixed-header>
+        <div class="journey" ng-show="isNumber(item.lowestPrice)" ng-repeat="item in arrayProductData | filter:query | orderBy:orderByField:reverseSort">
+          <basic-journey></basic-journey>
+        </div>
+   
+
+
+    </div>
+    
+    
+    <!--<div class="Example">-->
+    
+    <!--<b>Phish Food (500ml)</b><br />-->
+    <!--        <div class="MSPPricesContainer">-->
+    <!--            <a mySupermarket action="price" msdata="121" store="Waitrose" href="http://waitrose.mysupermarket.co.uk">Waitrose</a>-->
+    <!--            <a mySupermarket action="price" msdata="121" store="ASDA" href="http://asda.mysupermarket.co.uk">ASDA</a>-->
+    <!--            <a mySupermarket action="price" msdata="121" store="Morrisons" href="http://asda.mysupermarket.co.uk">ASDA</a>-->
+    <!--            <a mySupermarket action="price" msdata="121" store="Ocado" href="http://ocado.mysupermarket.co.uk">Ocado</a>-->
+    <!--            <a mySupermarket action="price" msdata="121" store="Sainsburys" href="http://sainsburys.mysupermarket.co.uk">Sainsburys</a>-->
+    <!--            <a mySupermarket action="price" msdata="121" store="Tesco" href="http://tesco.mysupermarket.co.uk">Tesco</a>-->
+    <!--            <a mySupermarket action="price" msdata="121" store="Waitrose" href="http://waitrose.mysupermarket.co.uk">Waitrose</a>-->
+    <!--        </div>-->
+    
+    <!--<br /><br />-->
+    <!--    </div>-->
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.4/angular.min.js"></script>
+    <!--directive views are loaded in app.js, where app is also initialized-->
+    <script src="./js/app.js"></script>
+    <script src="./js/ngDialog.js"></script>
+    <script src="js/controllers/mainCtrl.js"></script>
+		<script src="js/services/journeyDataSvc.js"></script>
+
+  </body>
+</html>

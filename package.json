@@ -1,0 +1,27 @@
+{
+  "name": "iceCreamOfTheWeekUK",
+  "version": "1.0.0",
+  "description": "price comparison for ice cream",
+  "main": "data.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://adamdiy@bitbucket.org/adamdiy/icecreamuk.git"
+  },
+  "keywords": [
+    "ice",
+    "cream",
+    "comparison",
+    "prices"
+  ],
+  "author": "adam",
+  "license": "mit",
+  "dependencies": {
+    "hapi": "^8.0.0",
+    "hapi-mongodb": "^2.3.0",
+    "mongodb": "^1.4.23",
+    "request": "^2.51.0"
+  }
+}
