@@ -56,10 +56,10 @@ $scope.orderByField = '-dealDiff';
       if(iceCreamObj.AsdaPrice>0)pricearray.push(iceCreamObj.AsdaPrice);
       if(iceCreamObj.WaitrPrice>0) pricearray.push(iceCreamObj.WaitrPrice);
       
-     
-      if(pricearray.length>0) {
         
       iceCreamObj.avgPrice = Array.avg(pricearray);
+      
+      if(activearray.length>0) {
       iceCreamObj.lowestPrice = Array.min(activearray);
       iceCreamObj.dealDiff = iceCreamObj.avgPrice - iceCreamObj.lowestPrice;
       //iceCreamObj.dealPercent = (iceCreamObj.dealDiff/iceCreamObj.avgPrice)*100;
