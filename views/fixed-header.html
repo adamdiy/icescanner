@@ -6,7 +6,7 @@
         <input class="quicksearch" ng-model=query type="text"/>
       </div>
      <div class="col-xs-3">
-        <p ng-click="advancedSearch()"><a>Store select</a></p>
+        <p ng-click="advancedSearch()"><a>Stores</a></p>
       </div>
        <div class="col-xs-3">
         <p ng-click="about()"><a>About</a></p>
@@ -15,7 +15,7 @@
 
 
     <div class="journey row header rowheaders">
-     <div class="col-xs-4">
+     <div class="col-xs-6">
         <p ng-click="orderByField='-productname'; reverseSort = !reverseSort">Item</p>
       </div>
       <div class="col-xs-2">
@@ -26,9 +26,6 @@
       </div>
       <div class="col-xs-2">
         <p ng-click="orderByField='dealDiff'; reverseSort = !reverseSort">Disc. £</p>
-      </div>
-       <div class="col-xs-2">
-        <p ng-click="orderByField='dealPercent'; reverseSort = !reverseSort">Disc. %</p>
       </div>
     </div>
 
