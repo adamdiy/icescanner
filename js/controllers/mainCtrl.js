@@ -93,7 +93,7 @@ $scope.submit = function (newSearchOptions) {
     for (var item in $scope.arrayProductData) {
       findLowestPrice($scope.arrayProductData[item]);
     }
-    closeThisDialog();
+
 }
 
     $scope.advancedSearch = function () {
